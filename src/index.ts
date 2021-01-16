@@ -9,7 +9,7 @@ const log: Logger = dummyLogger
 
 
 app.get( "/", ( req: any, res: { send: (arg0: string) => void; } ) => {
-    const a = res.send( "Hello world!" );
+    const a = res.send( "Hello world! test" );
 } );
 
 // start the Express server
