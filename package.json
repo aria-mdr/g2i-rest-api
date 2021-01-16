@@ -2,13 +2,13 @@
   "name": "g2i-rest-api",
   "version": "1.0.0",
   "description": "Code Challenge for G2I",
-  "main": "src/index.ts",
+  "main": "./index.ts",
   "scripts": {
     "tsc": "tsc",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "dev": "tsnd --respawn ./src/index.ts",
+    "dev": "tsnd --respawn ./index.ts",
     "prod": "tsc && node ./build/index.js",
     "start": "node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
