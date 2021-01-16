@@ -16,3 +16,5 @@ app.get( "/", ( req: any, res: { send: (arg0: string) => void; } ) => {
 app.listen( port, () => {
     log.info( `server started at http://localhost:${ port }` );
 } );
+
+export default app;
