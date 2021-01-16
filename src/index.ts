@@ -13,6 +13,11 @@ app.get( "/", ( req: any, res: { send: (arg0: string) => void; } ) => {
     log.info(a);
 } );
 
+app.get( "/app", ( req: any, res: { send: (arg0: string) => void; } ) => {
+    const a = res.send( "test" );
+    log.info(a);
+} );
+
 // start the Express server
 app.listen( port, () => {
     log.info( `server started at http://localhost:${ port }` );
