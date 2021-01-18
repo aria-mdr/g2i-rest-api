@@ -24,7 +24,7 @@ It enables users to access and manupilate acronyms stored in the data base in va
 
 The REST API to the example app is described below.
 
-## Fuzzy search for term either as an acronym or an acronym's meaning with optional pagination
+## Fuzzy search for a term either as an acronym or an acronym's meaning with optional pagination
 
 ### Request
 
@@ -52,7 +52,7 @@ The REST API to the example app is described below.
     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
     Access-Control-Expose-Headers: Content-Length
     Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
-    More-Acronyms-Available: false `indicator if more results are available`
+    `More-Acronyms-Available: false`
     Content-Type: application/json; charset=utf-8
     Content-Length: 5602
     ETag: W/"15e2-NHhx5hUVUB4vbofS+3dV94Po3Jk"
