@@ -20,7 +20,7 @@ It enables users to access and manupilate acronyms stored in the data base in va
     npm run production 
 ### Development Build with Hot Reloading
     npm run dev
-# REST API
+# End Points
 
 The REST API to the example app is described below.
 
