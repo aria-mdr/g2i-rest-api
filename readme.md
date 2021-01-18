@@ -112,3 +112,7 @@ The REST API to the example app is described below.
     Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
     Date: Mon, 18 Jan 2021 16:35:33 GMT
     Connection: close
+
+
+-------
+rest of the documentaion is coming soon, stay tuned
