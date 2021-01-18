@@ -1,6 +1,7 @@
 # REST API example application
 
 REST API built for the [G2I code challenge](https://gist.github.com/TejasQ/686e08eeab91f78ea2d946d7766a508c).
+This API is built for uses the following the data for the `World Texting Foundation`, also known as `WTF`.
 
 ## Install
 
@@ -13,6 +14,10 @@ REST API built for the [G2I code challenge](https://gist.github.com/TejasQ/686e0
 ## Run the tests
 
 ### Production Build
+    npm run production 
+
+### Development Build with Hot Reloading
+    npm run dev
 
 # REST API
 
