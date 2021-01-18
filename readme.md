@@ -43,8 +43,17 @@ The REST API to the example app is described below.
     });
   ```
 
-### Response
+### Query Parameters 
 
+**Required:**
+ 
+   `search=[string]`
+
+**Optional:**
+    `from=[number]`
+    `limit=[number]`
+
+### Successful Response
     HTTP/1.1 200 OK
     X-Powered-By: Express
     Access-Control-Allow-Origin: *
@@ -52,7 +61,7 @@ The REST API to the example app is described below.
     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
     Access-Control-Expose-Headers: Content-Length
     Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
-    More-Acronyms-Available: false | false
+    More-Acronyms-Available: true | false
     Content-Type: application/json; charset=utf-8
     Content-Length: 5602
     ETag: W/"15e2-NHhx5hUVUB4vbofS+3dV94Po3Jk"
@@ -81,8 +90,40 @@ The REST API to the example app is described below.
         ]
         "moreAcronymsAvailable": true | false
     }
+### No Results Found Response
+    HTTP/1.1 204 No Content
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Credentials: true
+    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+    Access-Control-Expose-Headers: Content-Length
+    Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
+    Date: Mon, 18 Jan 2021 16:35:33 GMT
+    Connection: close
 
-## Create a new Thing
+### No Results Found Response
+    HTTP/1.1 204 No Content
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Credentials: true
+    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+    Access-Control-Expose-Headers: Content-Length
+    Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
+    Date: Mon, 18 Jan 2021 16:35:33 GMT
+    Connection: close
+
+### Server Error Response
+    HTTP/1.1 503 Server Error
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Credentials: true
+    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+    Access-Control-Expose-Headers: Content-Length
+    Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
+    Date: Mon, 18 Jan 2021 16:35:33 GMT
+    Connection: close
+
+## Create a new Acronym
 
 ### Request
 
@@ -256,7 +297,6 @@ The REST API to the example app is described below.
     {"id":1,"name":"Foo","status":"changed3"}
 
 ## Attempt to change a Thing using invalid params
-
 ### Request
 
 `PUT /thing/:id`
