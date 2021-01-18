@@ -1,11 +1,11 @@
 import config from './common/config/env.config';
+import UsersRouter from './acronyms/routes.config';
+import AuthorizationRouter from './authorization/routes.config';
 import express from 'express';
 import bodyParser from "body-parser"
 import { dummyLogger, Logger } from "ts-log";
 
 const app = express();
-// const AuthorizationRouter = require('./authorization/routes.config');
-const UsersRouter = require('./users/routes.config');
 const log: Logger = dummyLogger
 
 app.use(function (req, res, next) {
@@ -22,10 +22,12 @@ app.use(function (req, res, next) {
 });
 
 app.use(bodyParser.json());
-// AuthorizationRouter.routesConfig(app);
+
+AuthorizationRouter.routesConfig(app);
 UsersRouter.routesConfig(app);
 
 
+
 app.listen(config.port, function () {
-    log.info( `server started at http://localhost:${ config.port }` );
+    log.info(`server started at http://localhost:${config.port}`);
 });
