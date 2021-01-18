@@ -45,11 +45,11 @@ The REST API to the example app is described below.
 
 ### Query Parameters 
 
-**Required:**
+* **Required:**
  
    `search=[string]`
 
-**Optional:**
+* **Optional:**
  
     `from=[number]`
     `limit=[number]`
