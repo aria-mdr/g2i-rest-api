@@ -52,14 +52,35 @@ The REST API to the example app is described below.
     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
     Access-Control-Expose-Headers: Content-Length
     Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
-    `More-Acronyms-Available: false`
+    More-Acronyms-Available: false | false
     Content-Type: application/json; charset=utf-8
     Content-Length: 5602
     ETag: W/"15e2-NHhx5hUVUB4vbofS+3dV94Po3Jk"
     Date: Mon, 18 Jan 2021 16:26:44 GMT
     Connection: close
 
-    []
+    {
+        "acronyms": [
+            {
+                "_id": "6003893ab710e5d02532af6a",
+                "acronym": ";S",
+                "meaning": "Gentle warning, like 'Hmm? What did you say?'",
+                "__v": 0,
+                "id": "6003893ab710e5d02532af6a"
+            },
+            {
+                "_id": "6003893ab710e5d02532b053",
+                "acronym": "BFFLNMW",
+                "meaning": "Best friends for life, no matter what",
+                "__v": 0,
+                "id": "6003893ab710e5d02532b053"
+            },
+            .
+            .
+            .
+        ]
+        "moreAcronymsAvailable": true | false
+    }
 
 ## Create a new Thing
 
