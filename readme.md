@@ -50,6 +50,7 @@ The REST API to the example app is described below.
    `search=[string]`
 
 **Optional:**
+ 
     `from=[number]`
     `limit=[number]`
 
