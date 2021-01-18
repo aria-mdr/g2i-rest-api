@@ -2,43 +2,62 @@
 
 REST API built for the [G2I code challenge](https://gist.github.com/TejasQ/686e08eeab91f78ea2d946d7766a508c).
 This API is built for uses the following the data for the `World Texting Foundation`, also known as `WTF`.
+It enables users to access and manupilate acronyms stored in the data base in variety of ways.
 
 ## Install
 
     npm install
+## URL
 
-## Run the app
+### Local Development
+    http://localhost:8282
 
-    unicorn -p 7000
+### Production
+    https://g2i-rest-api.vercel.app/
 
-## Run the tests
-
+## Run the API
 ### Production Build
     npm run production 
-
 ### Development Build with Hot Reloading
     npm run dev
-
 # REST API
 
 The REST API to the example app is described below.
 
-## Get list of Things
+## Fuzzy search for term either as an acronym or an acronym's meaning with optional pagination
 
 ### Request
 
-`GET /thing/`
+`GET /acronym?from=:from&limit=:limit&search=:seach`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+### Sample Call 
+
+```javascript
+    $.ajax({
+      url: "/acronym/acronym?from=50&limit=10&search=what",
+      dataType: "json",
+      type : "GET",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
 
 ### Response
 
     HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Credentials: true
+    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+    Access-Control-Expose-Headers: Content-Length
+    Access-Control-Allow-Headers: Accept, Authorization, Content-Type, X-Requested-With, Range
+    More-Acronyms-Available: false `indicator if more results are available`
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 5602
+    ETag: W/"15e2-NHhx5hUVUB4vbofS+3dV94Po3Jk"
+    Date: Mon, 18 Jan 2021 16:26:44 GMT
     Connection: close
-    Content-Type: application/json
-    Content-Length: 2
 
     []
 
