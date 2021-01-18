@@ -24,7 +24,7 @@ It enables users to access and manupilate acronyms stored in the data base in va
 
 The REST API to the example app is described below.
 
-## Fuzzy search for a term either as an acronym or an acronym's meaning with optional pagination
+## Search for a term with optional pagination
 
 ### Request
 
